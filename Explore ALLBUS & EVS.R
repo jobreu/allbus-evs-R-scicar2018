@@ -1,28 +1,16 @@
 # Install & load required packages ####
 
-#install.packages('rstudioapi')
-#install.packages('devtools)
-#install.packages('rvest)
-#install.packages('httr)
-#install.packages('haven')
-#install.packages('tidyverse')
-#install.packages('cartography')
-#install.packages('sp')
-#install.packages('geojsonio')
+for (pack in c("rstudioapi", "devtools", "rvest", "httr", "haven", "tidyverse", "cartography", "sp", "geojsonio")) {
+  if(!(pack %in% installed.packages()[,1])) {
+    install.packages(pack)
+  }
+  library(pack, character.only = T)
+}
 
-library(rstudioapi)
-library(devtools)
-#install_github("cttobin/ggthemr") # ggthemr is only available via GitHub
-#install_github("expersso/gesis") # we need the GitHub version as the download_codebook command from the CRAN version does not work for ALLBUS & EVS because they have multiple documents whose names include '_cdb'
+install_github("cttobin/ggthemr") # ggthemr is only available via GitHub
+install_github("expersso/gesis") # we need the GitHub version as the download_codebook command from the CRAN version does not work for ALLBUS & EVS because they have multiple documents whose names include '_cdb'
 library(ggthemr)
 library(gesis)
-library(haven)
-library(rvest)
-library(httr)
-library(tidyverse)
-library(cartography)
-library(sp)
-library(geojsonio)
 
 # Set working directory ####
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
