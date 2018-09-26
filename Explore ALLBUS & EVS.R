@@ -205,7 +205,7 @@ attitudes <- attitudes %>%  mutate(c_abrv = recode(c_abrv, `GB-GBN` = 'GB',
 # Reshape dataframe for plotting
 attitudes_map <- attitudes %>% 
   group_by(c_abrv) %>%  # calculate means for all selected attitude variables for each country
-  summarise(homo = mean (v240, na.rm = T),
+  summarise(homo = mean(v240, na.rm = T),
             abort = mean(v241, na.rm = T),
             euth = mean(v243, na.rm = T),
             invitro = mean(v251, na.rm = T))
