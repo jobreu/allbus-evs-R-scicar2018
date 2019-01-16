@@ -53,8 +53,8 @@ get_study_groups()
 get_datasets("0007") %>% 
   View("Available ALLBUS datasets")
 
-download_dataset(s, doi = "4587", path = "./Data", filetype = ".sav", purpose = 1) # doi here means the study number (that comes after "ZA" in the GESIS DBK)
-# purpose 1 =  for scientific research (incl. PhD); for other possible purposes, check ?download_dataset
+download_dataset(s, doi = "4587", path = "./Data", filetype = ".sav", purpose = 6) # doi here means the study number (that comes after "ZA" in the GESIS DBK)
+# purpose 6 =  for professional training and qualification (for this workshop); for other possible purposes, check ?download_dataset
 
 
 download_codebook(doi = "4587", path = "./Data")
@@ -148,8 +148,8 @@ ggsave("./Plots/Kontakte_mit_Auslaendern_ALLBUS_1980-2016.png")
 get_datasets("0009") %>% 
   View("Available EVS datasets")
 
-download_dataset(s, doi = "4800", path = "./Data", filetype = ".sav", purpose = 1) # doi here means the study number (that comes after "ZA" in the GESIS DBK)
-# purpose 1 =  for scientific research (incl. PhD); for other possible purposes, check ?download_dataset
+download_dataset(s, doi = "4800", path = "./Data", filetype = ".sav", purpose = 6) # doi here means the study number (that comes after "ZA" in the GESIS DBK)
+# purpose 6 =  for professional training and qualification (for this workshop); for other possible purposes, check ?download_dataset
 
 download_codebook(doi = "4800", path = "./Data")
 
